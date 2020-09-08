@@ -1,0 +1,1032 @@
+<html><head>
+		<title>Promises Log</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<meta http-equiv="Content-Language" content="en-GB">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Expires" content="-1">
+		<meta name="Author" content="Clarion Technologies, Pune-IND">
+		<meta name="Copyright" content="Clarion Technologies Pvt Ltd [www.clariontechnologies.co.in]">
+		<meta name="Description" content="">
+		<meta name="Keywords" content="">
+		<meta name="robots" content="noindex, nofollow">
+		<noscript><meta http-equiv="refresh" content="1; URL=../no_script.php"></noscript>
+		<link rel="stylesheet" href="../css/clarion_ats.css" type="text/css">
+		<link rel="stylesheet" href="../css/ats_calendar.css" type="text/css">
+		<script language="javascript" type="text/javascript" src="../js/toolkit.js"></script>
+		<script language="javascript" type="text/javascript" src="../js/functions.js"></script>
+		<link rel="stylesheet" type="text/css" media="all" href="../js/jscalendar/css/calendar-blue.css" title="win2k-cold-1">
+		<script src="../js/jscalendar/calendar.js"></script>
+		<script src="../js/jscalendar/language/calendar-en.js"></script>
+<script src="../js/jscalendar/calendar-setup.js"></script>
+		<script language="JavaScript" type="text/JavaScript">
+			function MM_preloadImages()
+			{ 
+				var d=document; 
+				if(d.images)
+				{ 
+					if(!d.MM_p) 
+						d.MM_p=new Array(); 
+						var i,j=d.MM_p.length,a=MM_preloadImages.arguments; 
+						for(i=0; i<a.length; i++) if (a[i].indexOf("#")!=0)
+						{ 
+							d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];
+						}
+				} 
+			}
+			function MM_swapImgRestore()
+			{ 
+				var i,x,a=document.MM_sr; 
+				for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) 
+				x.src=x.oSrc;
+			}
+			function MM_findObj(n, d)
+			{ 
+				var p,i,x;  
+				if(!d) d=document; 
+				if((p=n.indexOf("?"))>0&&parent.frames.length) 
+				{
+					d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);
+				} 
+				if(!(x=d[n])&&d.all) 
+				x=d.all[n]; 
+				for(i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+				for(i=0;!x&&d.layers&&i<d.layers.length;i++)x=MM_findObj(n,d.layers[i].document);
+				if(!x && d.getElementById) x=d.getElementById(n); return x;
+			}
+			function MM_swapImage()
+			{
+				var i,j=0,x,a=MM_swapImage.arguments; 
+				document.MM_sr=new Array; 
+				for(i=0;i<(a.length-2);i+=3)	
+				if ((x=MM_findObj(a[i]))!=null)
+				{
+					document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];
+				}
+			}
+			function popup(channelurl)
+			{
+				newwindow=winOpenCenter(channelurl,'name','height=400,width=490,resizable=0');
+			}
+			var highlightFlag = 1;
+			function highlight() 
+			{
+				if(highlightFlag == 1)
+				{
+					for(i=0;i<document.forms.length;i++)
+					{
+						for(j=0;j<document.forms[i].elements.length;j++)
+						{
+							
+							if(document.forms[i].elements[j].type =="text" || document.forms[i].elements[j].type =="password")
+							{
+								if(document.forms[i].elements[j].style.display != 'none')
+								{
+									document.forms[i].elements[j].focus();
+									break;
+								}
+							}
+							
+						}
+					}
+				}
+			}
+		</script>
+</head>
+<body class="body_default" onload=" highlight()">
+<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+<!---- BEGIN: Header ---->
+<tbody><tr>
+	<td colspan="3">
+		<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  			<tbody><tr>
+				<td><img src="../images/spacer.gif" border="0" width="4"></td>
+				<td width="100%" align="left" rowspan="2">
+					<a href="../">
+						<img src="../images/promise_logo.gif" border="0" title="Clarion Promise" alt="Clarion OAS">
+					</a>
+				</td>
+    			<td width="310" align="right" valign="top"><table width="310" border="0" cellspacing="0" cellpadding="0">
+						<tbody><tr>
+				<td align="right" class="legal">
+				<a href="../home.php" class="lightgrey"><b>HOME</b></a>&nbsp;&nbsp;
+				<img src="../images/dots_top.gif" width="1" height="17" border="0">&nbsp;&nbsp;
+				<a href="javascript:popup('../account/displayHelp.php?page=promise_to.php')" class="lightgrey"><b>HELP</b></a>&nbsp;&nbsp;
+				<img src="../images/dots_top.gif" width="1" height="17" border="0">&nbsp;&nbsp;
+				<a href="../logout.php" class="lightgrey"><b>LOGOUT</b></a>&nbsp;&nbsp;
+				<img src="../images/dots_top.gif" width="1" height="17" border="0">&nbsp;&nbsp;
+				</td>
+			</tr>
+      		<tr>
+      			<td><img src="../images/spacer.gif" border="0" height="2"></td>
+      		</tr>
+	  		<tr>
+	  			<td height="1" bgcolor="#EAEAEA"><img src="../images/spacer.gif" border="0" height="1"></td>
+	  		</tr>
+      		<tr>
+      			<td align="right" valign="bottom"><img src="../images/spacer.gif" border="0" height="10"></td>
+      		</tr>
+    	</tbody></table>
+    </td>
+  </tr>
+  <tr>
+	<td><img src="../images/spacer.gif" border="0"></td>
+	<td align="right"><!-- font color="#666666"><b>[Logged as: Administrator]</b></font -->&nbsp;</td>
+ </tr>
+</tbody></table>
+</td></tr>
+<tr><td colspan="3"><img src="../images/spacer.gif" border="0" height="2"></td></tr>
+<tr><td colspan="3">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr><td background="../images/top_strip_bg.gif" height="8"></td></tr>
+  <tr>
+	<td background="../images/top02_bg.gif" height="26" align="right">
+		<table width="100%" border="0" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+				<td align="right" valign="top" nowrap="">
+					<img src="../images/user02.gif" border="0">&nbsp;
+					<font color="#FFFFFF"><b>Logged as: </b></font>&nbsp;&nbsp;
+				</td>
+			</tr>
+				</tbody></table>
+	</td>
+  </tr>
+  <tr><td background="../images/shadow01_top.jpg" height="8"><img src="../images/spacer.gif" border="0" height="8"></td></tr>
+</tbody></table>
+</td></tr>
+<!---- END: Header ---->
+<tr><td colspan="3"><img src="../images/spacer.gif" border="0" height="10"></td></tr>
+<tr><td colspan="3" valign="TOP">
+<script language="JavaScript">
+function fnChangeOrder(fieldName)
+{
+	document.frmPromiseTo.srchOrder.value=fieldName;
+	if (document.frmPromiseTo.srchOrderBy.value == "ASC")
+	{
+	   document.frmPromiseTo.srchOrderBy.value ="DESC";	
+	}
+	else
+	{
+	   document.frmPromiseTo.srchOrderBy.value ="ASC";
+	}
+	btnClicked = document.frmPromiseTo.btnClicked.value;
+	
+	if(btnClicked.toLowerCase() == 'search')
+	{
+		document.frmPromiseTo.btnSearch.click();
+	}
+	else
+	{		
+		document.frmPromiseTo.btnShowAll.click();
+	}
+}
+function resetAll()
+{
+	document.frmPromiseTo.cboEmp.value = '';
+	document.frmPromiseTo.txtStartDate.value = '';
+	document.frmPromiseTo.txtEndDate.value = '';
+	document.frmPromiseTo.cboStatus.value = '';
+}
+</script>
+<form name="frmPromiseTo" id="frmPromiseTo" action="/clarion_promise_qa/promise/promise_to.php?SPTPage=1" method="post">
+<input type="hidden" name="srchOrder" value="" class="input_box">
+<input type="hidden" name="srchOrderBy" value="" class="input_box">
+<input type="hidden" name="btnClicked" value="">
+</form></td></tr><tr>
+	<td>
+		<table width="100%" border="0" cellspacing="0" cellpadding="1" bgcolor="#FBFAFA">
+			<tbody><tr>
+				<td>
+					<table width="98%" border="0" cellpadding="0" cellspacing="0" align="center">
+      					<tbody><tr><td height="5" colspan="2"></td></tr>
+	  					<tr>
+        					<td width="10" valign="middle"><img src="../images/title_img.gif" border="0"></td>
+                			<td class="large_black" valign="middle"> Promises To </td>
+      					</tr>
+     					<tr><td height="5" colspan="2"></td></tr>
+	  					<tr>
+							<td height="10">&nbsp;</td>
+							<td>&nbsp;<a href="../home.php">Home</a>&nbsp;»&nbsp;Promises To (Promisee):<b> Sanjeet Kumar</b></td>
+					  </tr>
+					<tr>
+							<td height="10">&nbsp;</td>
+							<td>&nbsp;List of all promises that you have received from any other employee</td>
+						</tr>
+	 				</tbody></table>
+				</td>
+			</tr>
+			<tr><td><img src="../images/spacer.gif" border="0" height="5"></td></tr>
+			<tr>
+				<td>
+				   <table width="70%" border="0" cellspacing="1" cellpadding="0" bgcolor="#CCCCCC" align="center">
+						<tbody><tr>
+							<td>
+								<table width="100%" border="0" cellspacing="0" cellpadding="1" bgcolor="#F3F3F3" align="center">
+									<tbody><tr><td height="20" valign="middle" bgcolor="#E3E3E3">&nbsp;<b>Search</b></td></tr>
+									<tr>
+										<td>
+											<table width="100%" border="0" cellspacing="1" cellpadding="2" align="center">
+												<tbody><tr>
+													<td nowrap="" align="right">Promisor:&nbsp;</td>
+													<td align="left">
+														<select name="cboEmp" id="cboEmp">
+															<option value="">-- All Promisors --</option>														
+															<option value="" selected=""> </option>	
+																
+															<option value="61E6016C52F63116E216DEC8AA8E4351">Aadesh Gharpure</option>	
+																
+															<option value="AEBF6923FA2D52C177D973F2B0F812CE">Aashish Sonawane</option>	
+																
+															<option value="66D955080DA4789F55975EE59ECAFA81">Abhay Deol</option>	
+																
+															<option value="B825A2EAE5AB65CE6BE027CB5242D5BE">Abhayd Deold</option>	
+																
+															<option value="7B5E01050C2A1F81C5588399A9634393">Abhijeet Kumar</option>	
+																
+															<option value="F765F3F4A7466BF3848C254EC27E2410">abhijit hirave</option>	
+																
+															<option value="FB34C282EE6BDEED0969C15D0768C911">Abhijit Patil</option>	
+																
+															<option value="B005070928390785B9C1B069856E6C20">Abhijit Patil</option>	
+																
+															<option value="93AE6F317C56B5C38F83456A87B2B562">abhishek gautam</option>	
+																
+															<option value="8ACAE7CA14FE801030E29AEAAF24D68E">Abhishek Thakur</option>	
+																
+															<option value="75C10D61D6A8BE576C6162F3665598C2">admin admin</option>	
+																
+															<option value="7110AF1524A965220204E3406E256213">Afzal Khan</option>	
+																
+															<option value="1CADFC39AD0AE4AE896CE3F28F3F4487">Ajay Tiwari</option>	
+																
+															<option value="9A60FF9FA03032CB92C926F60EAE0C95">Ajay kumarr</option>	
+																
+															<option value="3FE83A20DC255B79F4121EA22A7177DB">Ajay devgan</option>	
+																
+															<option value="BCBCF7BCB4139CAC3DEC59C824C06A0D">Ajay Borawake</option>	
+																
+															<option value="025959B7420154F177989A462BC3D85C">Ajay Gote</option>	
+																
+															<option value="E604EF4277152EBB11079D07C07F9BAA">Ajay Kumar Singh</option>	
+																
+															<option value="5F1B154ECF13705D159BF08C4F3B90B8">Ajaysinh Jagtap</option>	
+																
+															<option value="B059156605B7B941F5517C00D797F42E">Ajit Pendse</option>	
+																
+															<option value="A8E5B5B8EAFA384823434EF728C0863E">Akansha Mathur</option>	
+																
+															<option value="649F70C5B0E93D9921CD7463BD03DE4B">Akash Kamble</option>	
+																
+															<option value="3FFC6ED988D3C97993610CA3E003E178">Akhilesh Sawarkar</option>	
+																
+															<option value="DCA32176DDB73C62F2ED1D92BA88321D">Akhilesh Chandran</option>	
+																
+															<option value="81D83D87D80C72F8AA01BED407D664AA">Akhtar Hussain Hussain</option>	
+																
+															<option value="348854D38ECBBCB968C015B31770B43A">Akshay Patil</option>	
+																
+															<option value="3A8C7064D1F3226F858730E2F10DC384">Alok Jain</option>	
+																
+															<option value="B4B3DDF66DCC89E8F3738315F54A0DD5">amala katta</option>	
+																
+															<option value="DA757C849B6AC8B5AA3C2F2FD7007209">Ameet Prajapati</option>	
+																
+															<option value="AE522744B94E9F0E6A151AFD16B0F9CC">Amit Waychal</option>	
+																
+															<option value="550F5AD1941D04B2CFAB3CB252336383">Amit Hiremath</option>	
+																
+															<option value="A87EE92A8D7A838F78675D52CD099642">Amit Thakkar</option>	
+																
+															<option value="B224E19D5876312471855B3333C9F31F">Amit Danej</option>	
+																
+															<option value="BC1EC2F711D76B5A468ABEF807724A12">Amod Deshpande</option>	
+																
+															<option value="89A18BC0E91DB16410DD6DF3C73AB44F">Amol Lande</option>	
+																
+															<option value="4845015DDA44B59917CED51C3EFA778A">Amol Yerpude</option>	
+																
+															<option value="4D6EA7A5386197033008EFC912771696">Amol Jawale</option>	
+																
+															<option value="DF86B34E36EB230DD5E3CC11DE6CEE90">ANAND VARDHAN</option>	
+																
+															<option value="B624010AF4A40F89318CDABC8A9AAB6B">Anand Kumar Tripathi</option>	
+																
+															<option value="FFD7C2587D958542E56399BF2CB939F3">Anil Gudur</option>	
+																
+															<option value="66C42D841DFC5F9E88BF213011747BB7">Anish TR</option>	
+																
+															<option value="300E2567C895646FCB359BB397433411">Anita Tayde</option>	
+																
+															<option value="E61DE80844F460CFB8613B5D5625086B">Anjali Chikale</option>	
+																
+															<option value="854347B8FC19329F6C73C4C9411228EE">Anju Singh</option>	
+																
+															<option value="04AA81EA29F9BF9C4D79FFE1C9758633">Ankur Agarwal</option>	
+																
+															<option value="36D3B1B2031319BA09B684DB9C3446D9">Aparna Swaminathan</option>	
+																
+															<option value="8ED8092DFE583F279975477359DE03E0">Apoorv sharma</option>	
+																
+															<option value="5BA03E5F91CF25FF77659401596E0D53">Arati Nankar</option>	
+																
+															<option value="AA961E6BE4CA00052D592E5D30BB8589">Arpita Banerjee</option>	
+																
+															<option value="D95B240F359981BB36891B58AFF048CF">Arun Ram</option>	
+																
+															<option value="4B4AECBD02CAE7454A8C97B70DB9CA92">Ashish Dhagat</option>	
+																
+															<option value="3D88AC1D5288710AC0C6DD42339B5F4E">Ashish Jiwane</option>	
+																
+															<option value="FA96049EFB8895AA064D713D752572DA">Ashwin Jiwane</option>	
+																
+															<option value="B6705C1ED348445ACA1294587D6C7E54">Ashwin Khanzode</option>	
+																
+															<option value="86B83B5997D5D70E02067592D8FFD586">Ashwin Shaharkar</option>	
+																
+															<option value="4F58DCA16DEDF6DB613E983E2A4F4D2C">Asmita Sangamnerkar</option>	
+																
+															<option value="1DB7B5D85F08EAB91CC78DFB7907DEC6">Atul Nikam</option>	
+																
+															<option value="CDD61CD9B05084EE58FCDB819752B30B">Avina Maben</option>	
+																
+															<option value="AB7530F3ED0296FF189018B41A332F2D">Babulal A Gaffar</option>	
+																
+															<option value="E4791A01993D98BB03D76E8AB8DB2F97">Baskaran Balagurumurthi</option>	
+																
+															<option value="A53F8FBC48378F7BE04EEAD3240D947F">Benjamin Sundaram</option>	
+																
+															<option value="08BA5D69BE981A4A0E00234408864667">Bharati Patil</option>	
+																
+															<option value="9C163D37EF8C39E13C710A031132161F">BHAVANA BHAVAR</option>	
+																
+															<option value="790C93475D1931A0C4E7F729E3210FE9">Bhavesh Nandavana</option>	
+																
+															<option value="004B27674BD670FBEDC6A83E3B67EC44">Binita Shah</option>	
+																
+															<option value="6F83EFFEF00FECEB3A56C55DA1C27F9D">Bypina Rajesh</option>	
+																
+															<option value="93D9E2D18EF7A8141625D0127621CEC3">Chandan Mishra</option>	
+																
+															<option value="E1A62BAFF269F9217DE69BEB72D753A2">checkemp checkemp</option>	
+																
+															<option value="CC4F31A9B22ED47C1BC46DAF3C03DD8D">checkemp checkemp</option>	
+																
+															<option value="01B506C129677123CB485B9B5D94454E">Chetan Chaudhari</option>	
+																
+															<option value="2CC79348047B7E76B29F2CC011F1E6A9">Chetan Patil</option>	
+																
+															<option value="F73CCF3F1EC82FE17332AFAE7EFDC4CD">Chetan Patel</option>	
+																
+															<option value="59083F54423263182C32FFB217A86CCD">Chhaya Rai</option>	
+																
+															<option value="5FE0927D6EC25EEF012C9239363DF4A5">Chirag Prajapati</option>	
+																
+															<option value="58701423DBEF27E90F4E6F728F24F4FA">chirag Shah</option>	
+																
+															<option value="604AB2F8C07835707402BF97CD9030BE">Darshan Pandya</option>	
+																
+															<option value="149BB1F255BAD32260438037DB88185B">Darshan Bhosale</option>	
+																
+															<option value="D359A4E1EF3249B0901A7254773D7677">Deepak Falke</option>	
+																
+															<option value="49254A925A81AD8E633C3F1B9C1F60EE">Deepak Khot</option>	
+																
+															<option value="37FE1087F5090FD32EF59E1841D05111">Deshana Wankar</option>	
+																
+															<option value="D37800586C3FA415EE58B0D74613C8F8">Devanshi Shah</option>	
+																
+															<option value="B32CFD1ED0026F849F2FB02436F261E7">Devki Anote</option>	
+																
+															<option value="11941C76E3B8A3C308607EDE501CD3C5">Dhaval Soni</option>	
+																
+															<option value="96AE57CEAD9FC055AA989D4817886015">Dhiraj Gautame</option>	
+																
+															<option value="464E4412CB11EECF8AB063069E9A33C6">Elizabeth Alex</option>	
+																
+															<option value="56A53C483E72DC1E2A8A966035D7CA06">faraaz afshan</option>	
+																
+															<option value="5564825AC6CD0FAAF01565335A1C7BDC">firstnamefm lastnamefm</option>	
+																
+															<option value="48AA8AA3A3D7C5B6D3AE2C7BE94B1A66">fish fi</option>	
+																
+															<option value="11CA7499470E500C3E2A223F8E3D2368">Ganesh Sattawan</option>	
+																
+															<option value="29051F6F61EFF914948E4E78E5FE5D60">Ganesh Todkar</option>	
+																
+															<option value="689B57336573AF95A2DDC4F91D40B981">Gaurang Makwana</option>	
+																
+															<option value="87B9AE3F44C18347FB441C2483A7597F">Gaurav Yadav</option>	
+																
+															<option value="A26090E65373112C899AD3063F900C2D">Gopala Krishnan</option>	
+																
+															<option value="B5C3E4FFABF264B123D04AA08D2B0600">Gopi Turaka</option>	
+																
+															<option value="495196A0A9F757391338986847DFE4A5">Hardik Shah</option>	
+																
+															<option value="BAE8C0477EE965F8C8EB7D5CEC9E1ED5">harshad Mandlecha</option>	
+																
+															<option value="4C7A00249475DC57FC55893943CDA7FE">Harshad Pathak</option>	
+																
+															<option value="B0B22EA1E3DC623C172D0E94B8ABE6E7">Harshal Pandhe</option>	
+																
+															<option value="B6BC72A128EB54B7D934163DA25655E6">HARSHAL CHAUDHARI</option>	
+																
+															<option value="9BEC8939A78EDB9D30653429C1B21EA7">Heena Thackerr</option>	
+																
+															<option value="4965EEE9F1E38EF88DA7AE8C064FC2AC">Heena test</option>	
+																
+															<option value="08E68FE19BEAB5BD5E03250FD122C045">Hiten Soni</option>	
+																
+															<option value="7684BC5F28C64DC8E8D9FA08191A7F24">Hitesh Maniya</option>	
+																
+															<option value="267EFD1D3C0853D8AA93C91D87C0FD9E">Irshad KK</option>	
+																
+															<option value="0966B220A699AF6611C580C2612EA455">Jahfar Chenakkal</option>	
+																
+															<option value="4338F862716B969C452A9A69A915B807">Jaya Bhardwaj</option>	
+																
+															<option value="C6885958B7872225CADDD1B6508E7C39">Jeevan Gaikwad</option>	
+																
+															<option value="0432AD709D758B197B0B876EF804E5B7">Kalyani Bagale</option>	
+																
+															<option value="D25F5A4CDF654797B9D8F95B8C6233B3">Kanchan Doke</option>	
+																
+															<option value="31D6E9F668779E6AC9BF4BCFF7635317">Keshab Roy</option>	
+																
+															<option value="26CF3305D4FC46E5D254221D2A010DEE">Ketul Shah</option>	
+																
+															<option value="B1762EF925766F84C30E7A02B64F22A0">Komal Patel</option>	
+																
+															<option value="7095EC335FE7FD7CEB6FEC2FB4D23E0A">Krishna Kumar</option>	
+																
+															<option value="20A2C26DF906D6670E7B417BF2F85D75">Kunal Phadnis</option>	
+																
+															<option value="C369981EED851638ABAF21590A257BA0">Latha Vasudevan</option>	
+																
+															<option value="F8615F7B76F8915760E86109FA4C3B1E">Madhuri Chandbhanani</option>	
+																
+															<option value="D5B21BFABC34608FBB4DFB35F90B2A1A">Malhar Vora</option>	
+																
+															<option value="2753A9E4E91D46CC2E38324FC0E9A317">Manal Shah</option>	
+																
+															<option value="EE1BFFA81356A9678DBE6B0586127569">Manan Pandya</option>	
+																
+															<option value="1019FF4BC58B0AF42DC7687E219FA5F9">Manmeet Kaur</option>	
+																
+															<option value="B8421869100D6EAA679227560AFBAADB">Manoj Dhumal</option>	
+																
+															<option value="F15C8CD8F2B0DF2C7D89759705CA3B81">Mayank Vyas</option>	
+																
+															<option value="AB4728F976BBE5CB8E92651FC565112C">Mayur Sharma</option>	
+																
+															<option value="D7503F7D9851F54D03708865B80623A1">Meenakshi Verma</option>	
+																
+															<option value="7F3E7574EE480E6A9C56BF996FF2000B">MINAKSHI MULUK</option>	
+																
+															<option value="F04A7042EF041EEC4221DB10528576B4">Mona Taghavi</option>	
+																
+															<option value="E1BDEF7C79F13A133B66142E29F8BC73">Nahush Padalkar</option>	
+																
+															<option value="D2EE97056C507B9F7AEA961D7E34B501">Narayan Rao</option>	
+																
+															<option value="B6F1DEF8DA1D7469EF3BAC63BF7E0932">Nayan Raval</option>	
+																
+															<option value="2634D2F79AAD753BF930E2A628DC7691">Neeraj Solanki</option>	
+																
+															<option value="38E4F2871DD343A90635DD00D48B69D7">Neha Gupta</option>	
+																
+															<option value="6F7477D0DBA9969CAF18CFC1F161DB79">Neha Ladva</option>	
+																
+															<option value="CC98B3678A64756238BA3B2031FCCC6C">Nilesh Kalbhor</option>	
+																
+															<option value="7B6A91919F3B84B98F6E6E70BFA5B5FA">Niraj Oza</option>	
+																
+															<option value="9F0A282A5D7EC74423852B34CBCA846B">Nirja Pathak</option>	
+																
+															<option value="A2931FA3561221614940974A051AE607">Nisarg Rami</option>	
+																
+															<option value="A505746BAA29BB7EBF610B24D229DDFB">nitin tatte</option>	
+																
+															<option value="007C1857076847D1D20B97CA7B643B95">Pallavi Agarwal</option>	
+																
+															<option value="DC3A113BD2B59D923D5E3505DE2F6D8E">Pankti Shah</option>	
+																
+															<option value="F9187210365011F7CCF8A091D439F7C1">Parimal Kumar</option>	
+																
+															<option value="0C41F08B612452EE406C10E5CFEA0D9F">Parul Batra</option>	
+																
+															<option value="015E0DA09C5AE30DACB67982DCF813B9">Piyushkumar Patel</option>	
+																
+															<option value="E3950A61F3CEE953FA9E2532D939A52C">Pooja Gosavi</option>	
+																
+															<option value="5B601E2FD976BEE30E5BA88ABA6E2F31">Pooja Chavan</option>	
+																
+															<option value="34CA3C649B34EBDF67A209E0F30489B2">Pradeep Nayak</option>	
+																
+															<option value="C606C4D7AC9BAB6D55BA4240F75F154F">Prasad Kulkarni</option>	
+																
+															<option value="C6D00C2DB5C410F5868AC65F3BF9EDBE">Prasanjit Choudhury</option>	
+																
+															<option value="40612C099FDEBE609890C0FAB1755AA6">Prasanna Raval</option>	
+																
+															<option value="9EBC09EE7C553ED249990BA260D94C5E">Prashant Bhosale</option>	
+																
+															<option value="C43323D9E467196D149CEB7E5597191C">Prashant Pangare</option>	
+																
+															<option value="B6DFE14292ECA07FF056FB9ED28748A8">Pratik Shah</option>	
+																
+															<option value="5A518CE186070B83F9E37C2542089D43">Praveen Raj</option>	
+																
+															<option value="153DF49C5F0C14112F2F420D31DFCB69">Pritam Shinde</option>	
+																
+															<option value="B3003A33D0ECEBB04598CE7B85916DFF">Priyanka Kakade</option>	
+																
+															<option value="AA2FEA72C2E841FB328963B297FEFC90">Punit Gawande</option>	
+																
+															<option value="8621CC704B86C4FE8070581AAEFDEBF2">Rahul Deshmukh</option>	
+																
+															<option value="4DB6BBB350102C834E5B011F4ECC77A1">Rajendra Banker</option>	
+																
+															<option value="E778BEBCE8C3B0CBE6CCB3C741690382">Rajesh Adam</option>	
+																
+															<option value="70474AB3277C86E52CA3D20984F6970F">Rajesh Lashkari</option>	
+																
+															<option value="B532AEFFA9119234E2A255BEA11BE189">RASHMI PATEL</option>	
+																
+															<option value="0ABE1674708BC038578E40AAF0B1118D">Ravi kumar</option>	
+																
+															<option value="B23B43212E177D3E1F876B1BA0D9C6B6">Ravindra Manohar</option>	
+																
+															<option value="8F4DCEC588A80518D2221A7090A1139D">Ravindra Chaugule</option>	
+																
+															<option value="80F19B1BB6F6602FBF8ADDB3F1A8251D">Reena Dalvi</option>	
+																
+															<option value="BE538C763EDFDE302A340D1A6CFA5955">Richa Goel</option>	
+																
+															<option value="C7C22ECA41754CB645B2D39F9C3B578E">Rimple Saha</option>	
+																
+															<option value="6EF240B7EF5D2D613AF542B7C428C66D">Ritu Kamthan</option>	
+																
+															<option value="69DF4158B443CA8AB6A28F820A7211A9">Rohit Gupta</option>	
+																
+															<option value="2DE71D133348F301AC91EEA627B01B72">Romana Sayed</option>	
+																
+															<option value="8745F205181D8437AE3D7E3A85875447">Roopesh Kshattriya</option>	
+																
+															<option value="5B3C5987D4BC1AB0AEA72E733B3497A6">Rupesh Rasal</option>	
+																
+															<option value="7DB4C16BE360506E398A24373F5B134E">Rutaj Mehta</option>	
+																
+															<option value="4EC6233DE98CCCB28014AF7DAD6C9312">S Santhosh Kumar</option>	
+																
+															<option value="D1F5F41E4E8A35482E87E4D9501CB7A4">Sachin Phapale</option>	
+																
+															<option value="1C9AA31344CE79E9C6706BA914A60B9D">Sachin Pawar</option>	
+																
+															<option value="D34545CCC4E778ADE067FBE16812E3FE">sachin bhorkar</option>	
+																
+															<option value="FC0DDDB3B664DD418442595033C82FEB">Sachin wagde</option>	
+																
+															<option value="C8C6B1C29049D29EE66D62156797E012">Sakshi Agrawal</option>	
+																
+															<option value="DA3325D08DFF8A2747EC3A628276EA4B">salsan jose</option>	
+																
+															<option value="5910DCF320EBEB8537E3B1CB483E3821">Sameer Shaikh</option>	
+																
+															<option value="21FCC72B33A9CA3AE0AAEF65F5A1A8B5">sanjeev kumar</option>	
+																
+															<option value="7FA5255622FE19B176508E0B9276BF2A">Sanjeev Kumar</option>	
+																
+															<option value="285681744D640CDFB5FC05EB5790359A">Sanket Shah</option>	
+																
+															<option value="6264644B62EAAE2E14A899267350E013">Santosh Patil</option>	
+																
+															<option value="9BCD14E985A8CB90EB2257180E64965A">Santosh Shitole</option>	
+																
+															<option value="A9D97B65D40640C43CE229B252127B3D">Santosh Shukla</option>	
+																
+															<option value="DE8AF212C7452F7F3E17A5A98B7DDFF8">Sarfaraz Doni</option>	
+																
+															<option value="A78F0EEA8329852F58F1B6549A29CB58">Shailesh Menon</option>	
+																
+															<option value="BD17CE9397523EE647E27CD4A80329EF">Shakeeb Khan</option>	
+																
+															<option value="286562559419CD1115254C9F045D3BAB">Shashank Patel</option>	
+																
+															<option value="FD1D42A0453ED00BBAA4B509EDCDD734">Shimoli Shah</option>	
+																
+															<option value="3A25A2B746298319FF83D5A1300D425E">Smita Pokharkar</option>	
+																
+															<option value="971CF4D7910E0B5E8A68391C27AA93C3">sofi Baig</option>	
+																
+															<option value="EE810775795F26BFECFF0057B852544F">sonali shrungarpawar</option>	
+																
+															<option value="4FD8CA8F7257FFE0BF0D13098D160895">Sonali test</option>	
+																
+															<option value="269F9BED27445991CB138E5FB0F5C7F7">Sonali Kasture</option>	
+																
+															<option value="9AEAB5016B010E6E70B17403FD0AA080">Sridhar Gopal</option>	
+																
+															<option value="46159BC5E92C92B1809423639728AAAF">sssssssss sssssssss</option>	
+																
+															<option value="5C0B9362281566DA9C24051F49D7CF66">Sudhansu Khandai</option>	
+																
+															<option value="66B2B5946C912144DACA168186900747">Sumita Desai</option>	
+																
+															<option value="84C72200D40F7AE362859BEDBE032F3B">Surabhi Chincholkar</option>	
+																
+															<option value="B000CCB0E9C312EE695A65AB6EEA575F">swapnil Shah</option>	
+																
+															<option value="46783654FB4DBF583CE14FB2F109A505">Swapnil Patil</option>	
+																
+															<option value="756D930747829E9C2928148A037B7901">Swati Agrawal</option>	
+																
+															<option value="7B8495020E46CACA01B38985B6EF85D5">Sweta Chotalia</option>	
+																
+															<option value="404BC836AF1491BCF27ACF0EE6BF913C">Tanay Sarpotdar</option>	
+																
+															<option value="5BA43D119C5F7C3B8BF14494E71B17C7">Tapan Behera</option>	
+																
+															<option value="154F656EFCBBE2DB3512EFE687B9F7AE">TEJINDER SINGH</option>	
+																
+															<option value="33CC15BAB01A3FDB6C827A57CECA404A">test tt</option>	
+																
+															<option value="3A5752F31046EDB0DF83C0F71C0D6633">test tt</option>	
+																
+															<option value="26693EB4FE282CEC7AD2A3DF38549168">test tt</option>	
+																
+															<option value="3C3DDC2210F128ACEB7FC0957A02F27B">test tt</option>	
+																
+															<option value="C33EAEB9376F60CC5A2EEC96BB9166B2">test tt</option>	
+																
+															<option value="EBEF6995C6BB62957D4B6BA4994FA574">test tt</option>	
+																
+															<option value="455D701746E337199282B0472EFEB5CB">test tt</option>	
+																
+															<option value="3C7373237AAD1CFB77F8CBA7632E8315">test tt</option>	
+																
+															<option value="6456B706AF96A964CD588E5E8A3A64B2">test test</option>	
+																
+															<option value="B879A615E925EA3AA324F80C3B7E9FEC">test test</option>	
+																
+															<option value="668946BB2C7E40895E68AA6CBA473017">Test Third</option>	
+																
+															<option value="D2B98906318E5639827BA7A82B6DC2AC">test test</option>	
+																
+															<option value="DC38E574760E7A53782E58FF6FC963B8">test test</option>	
+																
+															<option value="12F0AA07AAD1D4A1B10EE1B02B687CA6">test tt</option>	
+																
+															<option value="FB25F1116EAEA2E610EFEBD856AF777F">test tt</option>	
+																
+															<option value="86119D1DCF03B442D7EC41DC67722E95">test tt</option>	
+																
+															<option value="4D1FCEC99414C66C111345950BB689E0">test emp</option>	
+																
+															<option value="1A21D721A3EC9E468EF56D3C76DAE29B">test last</option>	
+																
+															<option value="55F0ECA12F4B246514B724A3CFB00BBC">test tt</option>	
+																
+															<option value="C786849380E7256C06E85D42EF1B582F">test tt</option>	
+																
+															<option value="27C9040B2FB3857724ADA80608907218">test tt</option>	
+																
+															<option value="DB7779E985313E2249F20E48DE84835A">test tt</option>	
+																
+															<option value="DFCE0FEBF6786FCA1F96F4F09036C0C7">testsee yy</option>	
+																
+															<option value="BB50C8A6290436733B0C1CFC8717E99D">testsee cc</option>	
+																
+															<option value="15F077361890F647FAD220335F0BC529">testsee tt</option>	
+																
+															<option value="BAB5E52F9F8ABC86F43E5614A3254135">testtejas testtejas</option>	
+																
+															<option value="B235ABD2D104FC19EE152426403DFC9F">testtwo testtwo</option>	
+																
+															<option value="85CA8F8632105D281ECE7BF1A122022F">Thrinethra Siddani</option>	
+																
+															<option value="F3BD9C0FD1B6AD4C4F4798CD87094196">Trushant Pachnekar</option>	
+																
+															<option value="3E81BF6F3AF316C90B54DCD29F804DF2">tttttttt Mane</option>	
+																
+															<option value="8EE1798F6EB7412099DA5DA9D3D35071">UBED PATHAN</option>	
+																
+															<option value="0E840869172AE059E680E570A7FCA6A6">Utkarsh Tiwari</option>	
+																
+															<option value="9E88FE0BC44B5F7197B9C1CD0EE6F0B1">Vaibhav Tapare</option>	
+																
+															<option value="11D1F09002BE878710DC8A949871EAFA">Vaishali Narahari</option>	
+																
+															<option value="39A4BB0ED53D083C483F0CC1CC2674AE">Vijaylaxmi Singh</option>	
+																
+															<option value="5A8D6017A9A4E8B604B29B90122956BA">Vikas Kuren</option>	
+																
+															<option value="FB9351ED8D533C5681A78D85B52BD327">Vikas Hungund</option>	
+																
+															<option value="3BB2DD8C19E53B8CCBBCFFC1A6F5ED62">Vilas Chavan</option>	
+																
+															<option value="799F78156C7254C63112C5CF7CCAE6B9">Vinay Kumar S</option>	
+																
+															<option value="F65D62A64D4E61E79358F935D282802B">Vinay Bhagat</option>	
+																
+															<option value="DE7D2415B26350DE8661CA0F378C8656">Vinit Sambhare</option>	
+																
+															<option value="A76089A565C2474D1248E4FEE79CDEC5">vinith kumar</option>	
+																
+															<option value="8D6E6B68CF352F7BB3845F997DBDA60C">Vinod Wani</option>	
+																
+															<option value="06792BADE3597C11B1AC3179F20DFB8E">vinoth babu</option>	
+																
+															<option value="87EAA81894ECBEBEBCCCD2380E6375F5">Virang Soni</option>	
+																
+															<option value="15461E1BF00DCFBE319D3BE36C735626">Virendra Rana</option>	
+																
+															<option value="2ADFF1ABC428E68FB86998F62DDE83F6">Vishal Kadiwala</option>	
+																
+															<option value="A54C51A9F6A47BB7AE8951C3E4A6D069">Vishal P Shah</option>	
+																
+															<option value="8A434C68CC831DD0A2BADE06321E1FC0">Vivek Ambre</option>	
+																
+															<option value="E0FB4911F27CB5A3DE15616FD55CDA67">Vivek Doshi</option>	
+																
+															<option value="52DE91764044666555F80A56929F3D8F">Vivek kulkarni</option>	
+																
+															<option value="332DF79055B932CF386BB54CDC98E26C">Vivek Mangrulkar</option>	
+																
+															<option value="1E6B9F54AB952B76B602912A21E11B9C">Yash Mehta</option>	
+																
+															<option value="2B22054D517ADAA1BC09599968BEB891">Yogesh Pawar</option>	
+																
+															<option value="7631C5BCDD116C0297BED517BB0CDFE7">Yogesh Potdar</option>	
+																
+															<option value="B1D115DDDF45CB9CBEE2E17956AB7955">Yogesh Patil</option>	
+																
+															<option value="3BF9CDCA18D3256B48443FB1CE3924A6">Zainul Bagwan</option>	
+																													</select>
+													</td>
+													<td nowrap="" align="right">Start Date:&nbsp;</td>
+													<td nowrap="">
+													<input type="text" name="txtStartDate" size="15" class="input_box" id="txtStartDate" value="">
+											   		<a href="#"><img src="../images/calendar.gif" border="0" align="top" id="idImg1" size="15"></a>
+											   			<script>
+		Calendar.setup({
+        inputField     :    "txtStartDate",     // id of the input field
+        ifFormat       :    "%d-%m-%Y",      // format of the input field
+        button         :    "idImg1",  // trigger for the calendar (button ID)
+        align          :    "Tl",           // alignment (defaults to "Bl")
+        singleClick    :    true
+    });
+    </script>
+													</td>
+													<td nowrap="" align="right">&nbsp;End Date:&nbsp;</td>
+													<td nowrap="">
+													<input type="text" name="txtEndDate" size="15" class="input_box" id="txtEndDate" value="">
+											        <a href="#"><img src="../images/calendar.gif" border="0" align="top" id="idImg2" size="15"></a>
+											        	<script>
+		Calendar.setup({
+        inputField     :    "txtEndDate",     // id of the input field
+        ifFormat       :    "%d-%m-%Y",      // format of the input field
+        button         :    "idImg2",  // trigger for the calendar (button ID)
+        align          :    "Tl",           // alignment (defaults to "Bl")
+        singleClick    :    true
+    });
+    </script>
+													</td>
+													<td>Status:&nbsp;</td>
+													<td>	<select name="cboStatus" id="cboStatus">
+															<option value=""> --All Status Types-- </option>
+																															<option value="Accepted">Accepted</option>	  	
+																														<option value="Waiting For Reply">Waiting For Reply</option>	  	
+																												</select></td>
+												</tr>
+												<tr><td><img src="../images/spacer.gif" border="0" height="10"></td></tr>
+												<tr>
+													<td align="center" colspan="8"><input type="submit" name="btnSearch" value="Search" class="button_white"> 
+				 											 &nbsp;<input type="button" name="btnReset" value="Reset" onclick="javascript:resetAll();" class="button_white">
+				  											&nbsp; <input type="submit" name="btnShowAll" value="Show All" class="button_white" onclick="resetAll();">&nbsp;</td>					
+												</tr>
+											</tbody></table>
+										</td>
+									</tr>
+								</tbody></table>
+							</td>
+						</tr>
+					</tbody></table>
+				</td>
+			</tr>
+			<tr><td><img src="../images/spacer.gif" border="0" height="10"></td></tr>
+			<tr>
+				<td>
+					<table width="80%" border="0" cellspacing="1" cellpadding="0" align="center">
+											<tbody><tr><td colspan="2" align="center">
+								<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+								<tbody><tr>
+									<td width="98%" valign="middle" align="center"><font color="#FF0000">Promise already exists</font></td>
+								</tr>
+								</tbody></table>
+							</td></tr>
+							<tr><td colspan="2"><img src="../images/spacer.gif" border="0" height="5"></td></tr>
+				
+						<tr>
+							
+							<td align="right" style="padding-right:55px; "><b>[<a href="log_promise.php"><b>Add New Promise</b></a>]</b></td>
+						</tr>
+					</tbody></table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<table width="70%" border="0" cellspacing="1" cellpadding="0" bgcolor="#CCCCCC" align="center">
+						<tbody><tr>
+							<td>
+								<table width="100%" border="0" cellspacing="0" cellpadding="3" bgcolor="#F3F3F3" align="center">
+                    							<tbody><tr> 
+				                      			  <td colspan="5" height="23" valign="middle" bgcolor="#DCDCDC"><b>Promises List</b></td>
+                    							</tr>
+									<tr bgcolor="#EBEBEB"> 
+									  <td width="6%" align="center" nowrap="" style="border-right:1px solid #BBBBBB;border-bottom:1px solid #BBBBBB;"><a href="javascript:fnChangeOrder('PROMISEE_STATUS');"><b>Status</b></a></td>
+									  <td width="15%" align="center" nowrap="" style="border-right:1px solid #BBBBBB;border-bottom:1px solid #BBBBBB;"><a href="javascript:fnChangeOrder('FIRST_NAME');"><b>Promise From</b></a></td>
+									  <td width="51%" align="center" nowrap="" style="border-right:1px solid #BBBBBB;border-bottom:1px solid #BBBBBB;"><!--a href="javascript:fnChangeOrder('PROMISE');"--><b>Promise</b><!--/a--></td>
+									  <td width="16%" align="center" nowrap="" style="border-right:1px solid #BBBBBB;border-bottom:1px solid #BBBBBB;"><a href="#"><b>Log Date</b></a></td>									  
+									  <td width="12%" align="center" nowrap="" style="border-bottom:1px solid #BBBBBB;"><b>Action</b></td>
+									</tr>
+																					<tr bgcolor="" onmouseover="ManageHover(this, '#E9FF91')" onmouseout="ManageHover(this, '');">	
+		
+												<!--tr bgColor="#F3F3F3" onMouseOver="ManageHover(this, '#E9FF91')" onMouseOut="ManageHover(this, '#F3F3F3');"-->
+			 									<td nowrap="" align="center" style="border-right:1px solid #BBBBBB;border-bottom:1px solid #BBBBBB;">
+																						<img src="../images/waiting_icon.gif" title="Waiting For Reply">
+										</td>
+
+										  <td nowrap="" style="padding-left:10px;border-right:1px solid #BBBBBB;border-bottom:1px solid #BBBBBB;" align="left">Aashish Sonawane</td>
+										  <td align="left" style="padding-left:10px;border-right:1px solid #BBBBBB;border-bottom:1px solid #BBBBBB;">fhfhhyuuAAAAA</td>
+										  <td nowrap="" align="left" style="padding-left:10px;border-right:1px solid #BBBBBB;border-bottom:1px solid #BBBBBB;">31 May 2014</td>
+										  <!--td nowrap align="left" style="padding-left:10px;">Waiting For Reply</td-->
+										  <td nowrap="" align="center" style="border-bottom:1px solid #BBBBBB;"><a href="edit_promise_to.php?promiseID=2242">(Edit)</a></td>
+									</tr>
+																						<tr bgcolor="#EBEBEB" onmouseover="ManageHover(this, '#E9FF91')" onmouseout="ManageHover(this, '#EBEBEB');">	
+		
+												<!--tr bgColor="#F3F3F3" onMouseOver="ManageHover(this, '#E9FF91')" onMouseOut="ManageHover(this, '#F3F3F3');"-->
+			 									<td nowrap="" align="center" style="border-right:1px solid #BBBBBB;border-bottom:1px solid #BBBBBB;">
+																						<img src="../images/waiting_icon.gif" title="Waiting For Reply">
+										</td>
+
+										  <td nowrap="" style="padding-left:10px;border-right:1px solid #BBBBBB;border-bottom:1px solid #BBBBBB;" align="left">Parimal Kumar</td>
+										  <td align="left" style="padding-left:10px;border-right:1px solid #BBBBBB;border-bottom:1px solid #BBBBBB;">455647788848388</td>
+										  <td nowrap="" align="left" style="padding-left:10px;border-right:1px solid #BBBBBB;border-bottom:1px solid #BBBBBB;">31 May 2014</td>
+										  <!--td nowrap align="left" style="padding-left:10px;">Waiting For Reply</td-->
+										  <td nowrap="" align="center" style="border-bottom:1px solid #BBBBBB;"><a href="edit_promise_to.php?promiseID=2241">(Edit)</a></td>
+									</tr>
+																						<tr bgcolor="" onmouseover="ManageHover(this, '#E9FF91')" onmouseout="ManageHover(this, '');">	
+		
+												<!--tr bgColor="#F3F3F3" onMouseOver="ManageHover(this, '#E9FF91')" onMouseOut="ManageHover(this, '#F3F3F3');"-->
+			 									<td nowrap="" align="center" style="border-right:1px solid #BBBBBB;border-bottom:1px solid #BBBBBB;">
+																						<img src="../images/waiting_icon.gif" title="Waiting For Reply">
+										</td>
+
+										  <td nowrap="" style="padding-left:10px;border-right:1px solid #BBBBBB;border-bottom:1px solid #BBBBBB;" align="left">Aashish Sonawane</td>
+										  <td align="left" style="padding-left:10px;border-right:1px solid #BBBBBB;border-bottom:1px solid #BBBBBB;">ggg234567677</td>
+										  <td nowrap="" align="left" style="padding-left:10px;border-right:1px solid #BBBBBB;border-bottom:1px solid #BBBBBB;">31 May 2014</td>
+										  <!--td nowrap align="left" style="padding-left:10px;">Waiting For Reply</td-->
+										  <td nowrap="" align="center" style="border-bottom:1px solid #BBBBBB;"><a href="edit_promise_to.php?promiseID=2240">(Edit)</a></td>
+									</tr>
+																						<tr bgcolor="#EBEBEB" onmouseover="ManageHover(this, '#E9FF91')" onmouseout="ManageHover(this, '#EBEBEB');">	
+		
+												<!--tr bgColor="#F3F3F3" onMouseOver="ManageHover(this, '#E9FF91')" onMouseOut="ManageHover(this, '#F3F3F3');"-->
+			 									<td nowrap="" align="center" style="border-right:1px solid #BBBBBB;border-bottom:1px solid #BBBBBB;">
+																						<img src="../images/waiting_icon.gif" title="Waiting For Reply">
+										</td>
+
+										  <td nowrap="" style="padding-left:10px;border-right:1px solid #BBBBBB;border-bottom:1px solid #BBBBBB;" align="left">Abhay Deol</td>
+										  <td align="left" style="padding-left:10px;border-right:1px solid #BBBBBB;border-bottom:1px solid #BBBBBB;">123456789123</td>
+										  <td nowrap="" align="left" style="padding-left:10px;border-right:1px solid #BBBBBB;border-bottom:1px solid #BBBBBB;">31 May 2014</td>
+										  <!--td nowrap align="left" style="padding-left:10px;">Waiting For Reply</td-->
+										  <td nowrap="" align="center" style="border-bottom:1px solid #BBBBBB;"><a href="edit_promise_to.php?promiseID=2239">(Edit)</a></td>
+									</tr>
+																						<tr bgcolor="" onmouseover="ManageHover(this, '#E9FF91')" onmouseout="ManageHover(this, '');">	
+		
+												<!--tr bgColor="#F3F3F3" onMouseOver="ManageHover(this, '#E9FF91')" onMouseOut="ManageHover(this, '#F3F3F3');"-->
+			 									<td nowrap="" align="center" style="border-right:1px solid #BBBBBB;border-bottom:1px solid #BBBBBB;">
+																						<img src="../images/waiting_icon.gif" title="Waiting For Reply">
+										</td>
+
+										  <td nowrap="" style="padding-left:10px;border-right:1px solid #BBBBBB;border-bottom:1px solid #BBBBBB;" align="left">Kunal Phadnis</td>
+										  <td align="left" style="padding-left:10px;border-right:1px solid #BBBBBB;border-bottom:1px solid #BBBBBB;">Both fields are mandatory.</td>
+										  <td nowrap="" align="left" style="padding-left:10px;border-right:1px solid #BBBBBB;border-bottom:1px solid #BBBBBB;">31 May 2014</td>
+										  <!--td nowrap align="left" style="padding-left:10px;">Waiting For Reply</td-->
+										  <td nowrap="" align="center" style="border-bottom:1px solid #BBBBBB;"><a href="edit_promise_to.php?promiseID=2238">(Edit)</a></td>
+									</tr>
+																						<tr bgcolor="#EBEBEB" onmouseover="ManageHover(this, '#E9FF91')" onmouseout="ManageHover(this, '#EBEBEB');">	
+		
+												<!--tr bgColor="#F3F3F3" onMouseOver="ManageHover(this, '#E9FF91')" onMouseOut="ManageHover(this, '#F3F3F3');"-->
+			 									<td nowrap="" align="center" style="border-right:1px solid #BBBBBB;border-bottom:1px solid #BBBBBB;">
+																						<img src="../images/waiting_icon.gif" title="Waiting For Reply">
+										</td>
+
+										  <td nowrap="" style="padding-left:10px;border-right:1px solid #BBBBBB;border-bottom:1px solid #BBBBBB;" align="left">Virang Soni</td>
+										  <td align="left" style="padding-left:10px;border-right:1px solid #BBBBBB;border-bottom:1px solid #BBBBBB;">Test @ qwe</td>
+										  <td nowrap="" align="left" style="padding-left:10px;border-right:1px solid #BBBBBB;border-bottom:1px solid #BBBBBB;">31 May 2014</td>
+										  <!--td nowrap align="left" style="padding-left:10px;">Waiting For Reply</td-->
+										  <td nowrap="" align="center" style="border-bottom:1px solid #BBBBBB;"><a href="edit_promise_to.php?promiseID=2237">(Edit)</a></td>
+									</tr>
+																						<tr bgcolor="" onmouseover="ManageHover(this, '#E9FF91')" onmouseout="ManageHover(this, '');">	
+		
+												<!--tr bgColor="#F3F3F3" onMouseOver="ManageHover(this, '#E9FF91')" onMouseOut="ManageHover(this, '#F3F3F3');"-->
+			 									<td nowrap="" align="center" style="border-right:1px solid #BBBBBB;border-bottom:1px solid #BBBBBB;">
+																						<img src="../images/waiting_icon.gif" title="Waiting For Reply">
+										</td>
+
+										  <td nowrap="" style="padding-left:10px;border-right:1px solid #BBBBBB;border-bottom:1px solid #BBBBBB;" align="left">Aadesh Gharpure</td>
+										  <td align="left" style="padding-left:10px;border-right:1px solid #BBBBBB;border-bottom:1px solid #BBBBBB;">test again</td>
+										  <td nowrap="" align="left" style="padding-left:10px;border-right:1px solid #BBBBBB;border-bottom:1px solid #BBBBBB;">31 May 2014</td>
+										  <!--td nowrap align="left" style="padding-left:10px;">Waiting For Reply</td-->
+										  <td nowrap="" align="center" style="border-bottom:1px solid #BBBBBB;"><a href="edit_promise_to.php?promiseID=2236">(Edit)</a></td>
+									</tr>
+																						<tr bgcolor="#EBEBEB" onmouseover="ManageHover(this, '#E9FF91')" onmouseout="ManageHover(this, '#EBEBEB');">	
+		
+												<!--tr bgColor="#F3F3F3" onMouseOver="ManageHover(this, '#E9FF91')" onMouseOut="ManageHover(this, '#F3F3F3');"-->
+			 									<td nowrap="" align="center" style="border-right:1px solid #BBBBBB;border-bottom:1px solid #BBBBBB;">
+																						<img src="../images/waiting_icon.gif" title="Waiting For Reply">
+										</td>
+
+										  <td nowrap="" style="padding-left:10px;border-right:1px solid #BBBBBB;border-bottom:1px solid #BBBBBB;" align="left">Abhijeet Kumar</td>
+										  <td align="left" style="padding-left:10px;border-right:1px solid #BBBBBB;border-bottom:1px solid #BBBBBB;">This is the test area.</td>
+										  <td nowrap="" align="left" style="padding-left:10px;border-right:1px solid #BBBBBB;border-bottom:1px solid #BBBBBB;">31 May 2014</td>
+										  <!--td nowrap align="left" style="padding-left:10px;">Waiting For Reply</td-->
+										  <td nowrap="" align="center" style="border-bottom:1px solid #BBBBBB;"><a href="edit_promise_to.php?promiseID=2235">(Edit)</a></td>
+									</tr>
+																						<tr bgcolor="" onmouseover="ManageHover(this, '#E9FF91')" onmouseout="ManageHover(this, '');">	
+		
+												<!--tr bgColor="#F3F3F3" onMouseOver="ManageHover(this, '#E9FF91')" onMouseOut="ManageHover(this, '#F3F3F3');"-->
+			 									<td nowrap="" align="center" style="border-right:1px solid #BBBBBB;border-bottom:1px solid #BBBBBB;">
+																						<img src="../images/waiting_icon.gif" title="Waiting For Reply">
+										</td>
+
+										  <td nowrap="" style="padding-left:10px;border-right:1px solid #BBBBBB;border-bottom:1px solid #BBBBBB;" align="left">Vivek kulkarni</td>
+										  <td align="left" style="padding-left:10px;border-right:1px solid #BBBBBB;border-bottom:1px solid #BBBBBB;">@@#$$%%#$%%</td>
+										  <td nowrap="" align="left" style="padding-left:10px;border-right:1px solid #BBBBBB;border-bottom:1px solid #BBBBBB;">31 May 2014</td>
+										  <!--td nowrap align="left" style="padding-left:10px;">Waiting For Reply</td-->
+										  <td nowrap="" align="center" style="border-bottom:1px solid #BBBBBB;"><a href="edit_promise_to.php?promiseID=2234">(Edit)</a></td>
+									</tr>
+																						<tr bgcolor="#EBEBEB" onmouseover="ManageHover(this, '#E9FF91')" onmouseout="ManageHover(this, '#EBEBEB');">	
+		
+												<!--tr bgColor="#F3F3F3" onMouseOver="ManageHover(this, '#E9FF91')" onMouseOut="ManageHover(this, '#F3F3F3');"-->
+			 									<td nowrap="" align="center" style="border-right:1px solid #BBBBBB;border-bottom:1px solid #BBBBBB;">
+																						<img src="../images/waiting_icon.gif" title="Waiting For Reply">
+										</td>
+
+										  <td nowrap="" style="padding-left:10px;border-right:1px solid #BBBBBB;border-bottom:1px solid #BBBBBB;" align="left">Aadesh Gharpure</td>
+										  <td align="left" style="padding-left:10px;border-right:1px solid #BBBBBB;border-bottom:1px solid #BBBBBB;">I promise i work hard.</td>
+										  <td nowrap="" align="left" style="padding-left:10px;border-right:1px solid #BBBBBB;border-bottom:1px solid #BBBBBB;">31 May 2014</td>
+										  <!--td nowrap align="left" style="padding-left:10px;">Waiting For Reply</td-->
+										  <td nowrap="" align="center" style="border-bottom:1px solid #BBBBBB;"><a href="edit_promise_to.php?promiseID=2233">(Edit)</a></td>
+									</tr>
+																			<tr><td colspan="5" align="center"><script language="javascript" type="text/javascript">
+if(!document.fnSPT5F56C4E0D267A) { function fnSPT5F56C4E0D267A() {  try { var hndFRM=document.frmPromiseTo; } catch(e) { alert("Smart Paging Technique [Error: Document.Form is NULL or not an Object]"); return; } var URL_Add="&"; var ToPage="?"; ToPage+="SPTPage="; if(fnSPT5F56C4E0D267A.arguments[0]) ToPage+=fnSPT5F56C4E0D267A.arguments[0]; hndFRM.action=" "+ToPage+URL_Add; hndFRM.method="POST"; hndFRM.submit(); } } 
+</script><table width="100%" cellpadding="0" cellspacing="0" border="0"><tbody><tr>
+<td><table width="100%" cellpadding="0" cellspacing="0"><tbody><tr><td width="25%" align="left" style="font-family:Verdana;font-size:11px;color:#000000;">&nbsp;</td><td width="75%" align="right">&lt;&lt;First&nbsp;&lt;Prev&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;<a href="#" onclick="javascript:{fnSPT5F56C4E0D267A(2);}">2</a>&nbsp;&nbsp;<a href="#" onclick="javascript:{fnSPT5F56C4E0D267A(3);}">3</a>&nbsp;&nbsp;<a href="#" onclick="javascript:{fnSPT5F56C4E0D267A(4);}">4</a>&nbsp;&nbsp;<a href="#" onclick="javascript:{fnSPT5F56C4E0D267A(5);}">5</a>&nbsp;&nbsp;<a href="#" onclick="javascript:{fnSPT5F56C4E0D267A(2);}" title="Move to Next Page">Next&gt;</a>&nbsp;<a href="#" onclick="javascript:{fnSPT5F56C4E0D267A(588);}" title="Move to Last Page">Last&gt;&gt;</a>&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+</tbody></table></td></tr></tbody></table></td></tr>
+									        
+							 		         					<tr>
+		         						<td align="left" style="padding-left: 20px" colspan="5">
+															 					</td>
+					 				</tr>
+							 								<tr> 
+			                      			</tr><tr><td nowrap="" colspan="7" valign="middle"><img src="../images/spacer.gif" border="0" height="10"></td></tr>
+								<tr><td colspan="7">
+			<table align="right" cellspecing="0" cellpadding="2" style="border-top:1px solid black;border-right:1px solid black;border-left:1px solid black;border-bottom:1px solid black;">
+			<tbody><tr>
+				<td style="font-weight:bold;">Status Color Index</td>
+				<td>&nbsp;</td>
+				<td style="padding-left:15px;"><img src="../images/waiting_icon.gif"></td>
+				<td>Waiting For Reply</td>
+				<td style="padding-left:15px;"><img src="../images/under_reviewing_icon.gif"></td>
+				<td>Under Review</td>
+				<td style="padding-left:15px;"><img src="../images/accepted_icon.gif"></td>
+				<td>Accepted</td>
+			</tr>
+			</tbody></table>
+		</td></tr>
+                  			</tbody></table>
+						</td>
+					</tr>
+				</tbody></table>
+			</td>
+		</tr>
+		<tr><td><img src="../images/spacer.gif" border="0" height="10"></td></tr>
+	</tbody></table>
+
+</td></tr>
+</tbody></table>
+
+
+<!-- TR><TD COLSPAN="3">
+<table cellspacing="0" cellpadding="0" border="0" width="100%" align="center" background="../images/base_bg.jpg" bgColor="#D12020">
+	<tr>
+		<td class="footer" width="1005" align="center" height="19"><label class="white_footer">&copy;2006 Clarion Technologies. All rights reserved</label>&nbsp;|&nbsp;<a href="#" class="footer">Report a bug</a></td>
+		<td></td>
+	</tr>
+</table>
+</TD></TR>
+<TR><TD background="../images/shadow01_top.jpg" height="8"><img src="../images/spacer.gif" border="0" height="8"></TD></TR -->
+
+
+</body></html>

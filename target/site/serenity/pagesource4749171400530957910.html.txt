@@ -1,0 +1,239 @@
+<html><head>
+		<title>Promises Log</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<meta http-equiv="Content-Language" content="en-GB">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Expires" content="-1">
+		<meta name="Author" content="Clarion Technologies, Pune-IND">
+		<meta name="Copyright" content="Clarion Technologies Pvt Ltd [www.clariontechnologies.co.in]">
+		<meta name="Description" content="">
+		<meta name="Keywords" content="">
+		<meta name="robots" content="noindex, nofollow">
+		<noscript><meta http-equiv="refresh" content="1; URL=no_script.php"></noscript>
+		<link rel="stylesheet" href="css/clarion_ats.css" type="text/css">
+		<link rel="stylesheet" href="css/ats_calendar.css" type="text/css">
+		<script language="javascript" type="text/javascript" src="js/toolkit.js"></script>
+		<script language="javascript" type="text/javascript" src="js/functions.js"></script>
+		<link rel="stylesheet" type="text/css" media="all" href="js/jscalendar/css/calendar-blue.css" title="win2k-cold-1">
+		<script src="js/jscalendar/calendar.js"></script>
+		<script src="js/jscalendar/language/calendar-en.js"></script>
+<script src="js/jscalendar/calendar-setup.js"></script>
+		<script language="JavaScript" type="text/JavaScript">
+			function MM_preloadImages()
+			{ 
+				var d=document; 
+				if(d.images)
+				{ 
+					if(!d.MM_p) 
+						d.MM_p=new Array(); 
+						var i,j=d.MM_p.length,a=MM_preloadImages.arguments; 
+						for(i=0; i<a.length; i++) if (a[i].indexOf("#")!=0)
+						{ 
+							d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];
+						}
+				} 
+			}
+			function MM_swapImgRestore()
+			{ 
+				var i,x,a=document.MM_sr; 
+				for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) 
+				x.src=x.oSrc;
+			}
+			function MM_findObj(n, d)
+			{ 
+				var p,i,x;  
+				if(!d) d=document; 
+				if((p=n.indexOf("?"))>0&&parent.frames.length) 
+				{
+					d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);
+				} 
+				if(!(x=d[n])&&d.all) 
+				x=d.all[n]; 
+				for(i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+				for(i=0;!x&&d.layers&&i<d.layers.length;i++)x=MM_findObj(n,d.layers[i].document);
+				if(!x && d.getElementById) x=d.getElementById(n); return x;
+			}
+			function MM_swapImage()
+			{
+				var i,j=0,x,a=MM_swapImage.arguments; 
+				document.MM_sr=new Array; 
+				for(i=0;i<(a.length-2);i+=3)	
+				if ((x=MM_findObj(a[i]))!=null)
+				{
+					document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];
+				}
+			}
+			function popup(channelurl)
+			{
+				newwindow=winOpenCenter(channelurl,'name','height=400,width=490,resizable=0');
+			}
+			var highlightFlag = 1;
+			function highlight() 
+			{
+				if(highlightFlag == 1)
+				{
+					for(i=0;i<document.forms.length;i++)
+					{
+						for(j=0;j<document.forms[i].elements.length;j++)
+						{
+							
+							if(document.forms[i].elements[j].type =="text" || document.forms[i].elements[j].type =="password")
+							{
+								if(document.forms[i].elements[j].style.display != 'none')
+								{
+									document.forms[i].elements[j].focus();
+									break;
+								}
+							}
+							
+						}
+					}
+				}
+			}
+		</script>
+</head>
+<body class="body_default" onload=" highlight()">
+<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+<!---- BEGIN: Header ---->
+<tbody><tr>
+	<td colspan="3">
+		<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  			<tbody><tr>
+				<td><img src="images/spacer.gif" border="0" width="4"></td>
+				<td width="100%" align="left" rowspan="2">
+					<a href="">
+						<img src="images/promise_logo.gif" border="0" title="Clarion Promise" alt="Clarion OAS">
+					</a>
+				</td>
+    			<td width="310" align="right" valign="top"><table width="310" border="0" cellspacing="0" cellpadding="0">
+						<tbody><tr>
+				<td align="right" class="legal">
+				<a href="home.php" class="lightgrey"><b>HOME</b></a>&nbsp;&nbsp;
+				<img src="images/dots_top.gif" width="1" height="17" border="0">&nbsp;&nbsp;
+				<a href="javascript:popup('account/displayHelp.php?page=home.php')" class="lightgrey"><b>HELP</b></a>&nbsp;&nbsp;
+				<img src="images/dots_top.gif" width="1" height="17" border="0">&nbsp;&nbsp;
+				<a href="logout.php" class="lightgrey"><b>LOGOUT</b></a>&nbsp;&nbsp;
+				<img src="images/dots_top.gif" width="1" height="17" border="0">&nbsp;&nbsp;
+				</td>
+			</tr>
+      		<tr>
+      			<td><img src="images/spacer.gif" border="0" height="2"></td>
+      		</tr>
+	  		<tr>
+	  			<td height="1" bgcolor="#EAEAEA"><img src="images/spacer.gif" border="0" height="1"></td>
+	  		</tr>
+      		<tr>
+      			<td align="right" valign="bottom"><img src="images/spacer.gif" border="0" height="10"></td>
+      		</tr>
+    	</tbody></table>
+    </td>
+  </tr>
+  <tr>
+	<td><img src="images/spacer.gif" border="0"></td>
+	<td align="right"><!-- font color="#666666"><b>[Logged as: Administrator]</b></font -->&nbsp;</td>
+ </tr>
+</tbody></table>
+</td></tr>
+<tr><td colspan="3"><img src="images/spacer.gif" border="0" height="2"></td></tr>
+<tr><td colspan="3">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr><td background="images/top_strip_bg.gif" height="8"></td></tr>
+  <tr>
+	<td background="images/top02_bg.gif" height="26" align="right">
+		<table width="100%" border="0" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+				<td align="right" valign="top" nowrap="">
+					<img src="images/user02.gif" border="0">&nbsp;
+					<font color="#FFFFFF"><b>Logged as: </b></font>&nbsp;&nbsp;
+				</td>
+			</tr>
+				</tbody></table>
+	</td>
+  </tr>
+  <tr><td background="images/shadow01_top.jpg" height="8"><img src="images/spacer.gif" border="0" height="8"></td></tr>
+</tbody></table>
+</td></tr>
+<!---- END: Header ---->
+<tr><td colspan="3"><img src="images/spacer.gif" border="0" height="10"></td></tr>
+<tr><td colspan="3" valign="TOP">
+<table width="99%" border="0" cellspacing="1" cellpadding="0" bgcolor="#FFFFFF" align="center">
+<tbody><tr><td>
+<table width="100%" border="0" cellspacing="0" cellpadding="1" bgcolor="#FFFFFF">
+ <tbody><tr>
+	<td align="left">
+		<table width="900" border="0" cellspacing="1" cellpadding="0" bgcolor="#C6C6C6" align="center">
+		    <tbody><tr>
+				<td><table width="100%" border="0" cellspacing="1" cellpadding="0" bgcolor="#F5F5F5">
+                    <tbody><tr> 
+                      <td valign="top"> <table width="100%" border="0" cellspacing="1" cellpadding="0" align="center">
+                          <tbody><tr> 
+                            <td align="left" valign="top"> 
+                              <!-- body table should start from here-->
+                              <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+                                <tbody><tr> 
+                                  <td height="20" bgcolor="#D3D2D2" align="left">&nbsp;&nbsp;&nbsp;<font color="#000033"><b>Log 
+                                    Promise</b></font></td>
+                                </tr>
+                                <tr> 
+                                  <td align="left"><ul>
+				     	
+                                      	<li><a href="promise/log_promise.php">Log Promise</a></li>
+                        	      	<li><a href="promise/promise_from.php">Promises From</a></li>
+				      	<li><a href="promise/promise_to.php">Promises To</a></li>
+                                                                          </ul></td>
+                                </tr>
+                              </tbody></table>
+                              <!--ends here-->
+                            </td>
+                            <td width="300" valign="top">&nbsp;</td>
+                            <td width="300" valign="top">&nbsp;</td>
+                          </tr>
+                          <tr>
+				<td width="300" valign="top">
+					<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+					<tbody><tr>
+						<td height="20" bgcolor="#D3D2D2" align="left">&nbsp;&nbsp;&nbsp;<font color="#000033"><b>Account Settings</b></font></td>
+					</tr>
+					<tr>
+						<td align="left"><ul>
+							<li><a href="account/myprofile.php">My Account</a></li>
+														 </ul></td>
+					</tr>
+					</tbody></table>
+				</td>
+				<td width="300" valign="top">
+					<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+					<tbody><tr>
+						<td height="20" bgcolor="#D3D2D2" align="left">&nbsp;&nbsp;&nbsp;<font color="#000033"><b>Miscellaneous</b></font></td>
+					</tr>
+					<tr>
+						<td align="left">
+						 						</td>
+					</tr>
+					</tbody></table>
+				</td>
+				<td width="300" valign="top">&nbsp;</td>
+			 </tr>
+                         </tbody></table></td>
+                    </tr>
+                  </tbody></table></td>
+			</tr>
+		</tbody></table>
+</td></tr>
+</tbody></table>
+</td></tr>
+</tbody></table>
+</td></tr>
+<tr><td colspan="3" height="20"></td></tr>
+<!-- TR><TD COLSPAN="3">
+<table cellspacing="0" cellpadding="0" border="0" width="100%" align="center" background="images/base_bg.jpg" bgColor="#D12020">
+	<tr>
+		<td class="footer" width="1005" align="center" height="19"><label class="white_footer">&copy;2006 Clarion Technologies. All rights reserved</label>&nbsp;|&nbsp;<a href="#" class="footer">Report a bug</a></td>
+		<td></td>
+	</tr>
+</table>
+</TD></TR>
+<TR><TD background="images/shadow01_top.jpg" height="8"><img src="images/spacer.gif" border="0" height="8"></TD></TR -->
+
+</tbody></table>
+</body></html>

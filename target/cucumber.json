@@ -1,0 +1,482 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 12,
+        "name": "1) Verify Error message after navigating to application url and clicking on submit button without filling username and password field",
+        "description": "",
+        "id": "promises-log-functionality;1)-verify-error-message-after-navigating-to-application-url-and-clicking-on-submit-button-without-filling-username-and-password-field;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 4303147000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user navigates to the login page of the clarion portal",
+            "match": {
+              "location": "LoginStepDef.userNavigatesToTheLoginPageOfTheClarionPortal()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 180366200,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user provides username as \"\" and password as \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "",
+                  "offset": 27
+                },
+                {
+                  "val": "",
+                  "offset": 46
+                }
+              ],
+              "location": "LoginStepDef.userProvidesUsernameAsAndPasswordAs(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 266292000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "click on submit button",
+            "match": {
+              "location": "LoginStepDef.clickOnSubmitButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 129208200,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user should see the login validation error message as \"Invalid Username/password\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Invalid Username/password",
+                  "offset": 55
+                }
+              ],
+              "location": "LoginStepDef.userShouldSeeTheLoginValidationErrorMessageAs(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@PromiseLog"
+          },
+          {
+            "name": "@1"
+          }
+        ]
+      },
+      {
+        "line": 23,
+        "name": "2) Verify user is logged into the application successfully after providing correct username and password",
+        "description": "",
+        "id": "promises-log-functionality;2)-verify-user-is-logged-into-the-application-successfully-after-providing-correct-username-and-password;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3045539400,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "user navigates to the login page of the clarion portal",
+            "match": {
+              "location": "LoginStepDef.userNavigatesToTheLoginPageOfTheClarionPortal()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 251013400,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "user provides username as \"sanjeetk@clariontechnologies.co.in\" and password as \"clarion\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "sanjeetk@clariontechnologies.co.in",
+                  "offset": 27
+                },
+                {
+                  "val": "clarion",
+                  "offset": 80
+                }
+              ],
+              "location": "LoginStepDef.userProvidesUsernameAsAndPasswordAs(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 520093500,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "click on submit button",
+            "match": {
+              "location": "LoginStepDef.clickOnSubmitButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 700318700,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "user should be navigated to home page successfully",
+            "match": {
+              "location": "LoginStepDef.userShouldBeNavigatedToHomePageSuccessfully()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@PromiseLog"
+          },
+          {
+            "name": "@2"
+          }
+        ]
+      },
+      {
+        "line": 43,
+        "name": "3) Add Promise and verify whether it has been added succesfully",
+        "description": "",
+        "id": "promises-log-functionality;3)-add-promise-and-verify-whether-it-has-been-added-succesfully;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 4959832300,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "user navigates to the login page of the clarion portal",
+            "match": {
+              "location": "LoginStepDef.userNavigatesToTheLoginPageOfTheClarionPortal()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 191509300,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "user provides username as \"sanjeetk@clariontechnologies.co.in\" and password as \"clarion\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "sanjeetk@clariontechnologies.co.in",
+                  "offset": 27
+                },
+                {
+                  "val": "clarion",
+                  "offset": 80
+                }
+              ],
+              "location": "LoginStepDef.userProvidesUsernameAsAndPasswordAs(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 520882500,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "click on submit button",
+            "match": {
+              "location": "LoginStepDef.clickOnSubmitButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 600866500,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "user should be navigated to home page successfully",
+            "match": {
+              "location": "LoginStepDef.userShouldBeNavigatedToHomePageSuccessfully()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 309892400,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "user clicks on LogPromise Link",
+            "match": {
+              "location": "LogPromiseStepDef.userClicksOnLogPromiseLink()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1099628500,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "user should land on LogPromise home page",
+            "match": {
+              "location": "LogPromiseStepDef.userShouldLandOnLogPromiseHomePage()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 16483243400,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "user selects \"Sonali test\" from promisefrom dropdown value",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Sonali test",
+                  "offset": 14
+                }
+              ],
+              "location": "LogPromiseStepDef.userSelectsFromPromisefromDropdownValue(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 117044100,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "user enters promise message as \"Enter Promise\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Enter Promise",
+                  "offset": 32
+                }
+              ],
+              "location": "LogPromiseStepDef.userEntersPromiseMessageAs(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 890055900,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "user clicks on LogPromise button",
+            "match": {
+              "location": "LogPromiseStepDef.userClicksOnLogPromiseButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 539118300,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "user should land on search PromisePage",
+            "match": {
+              "location": "SearchPromiseStepDef.userShouldLandOnSearchPromisePage()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5413645800,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "user selects \"Sonali test\" from promisefrom dropdown value",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Sonali test",
+                  "offset": 14
+                }
+              ],
+              "location": "LogPromiseStepDef.userSelectsFromPromisefromDropdownValue(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 505660900,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "user click on search button",
+            "match": {
+              "location": "SearchPromiseStepDef.userClickOnSearchButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 79535986600,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "user should see entry with the date of creation",
+            "match": {
+              "location": "SearchPromiseStepDef.userShouldSeeEntryWithTheDateOfCreation()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@PromiseLog"
+          },
+          {
+            "name": "@3\u00264"
+          }
+        ]
+      },
+      {
+        "line": 55,
+        "name": "4) Verify user is able to log out from the application successfully after clicking on logout button",
+        "description": "",
+        "id": "promises-log-functionality;4)-verify-user-is-able-to-log-out-from-the-application-successfully-after-clicking-on-logout-button;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 2910414000,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "user navigates to the login page of the clarion portal",
+            "match": {
+              "location": "LoginStepDef.userNavigatesToTheLoginPageOfTheClarionPortal()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 236470700,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "user provides username as \"sanjeetk@clariontechnologies.co.in\" and password as \"clarion\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "sanjeetk@clariontechnologies.co.in",
+                  "offset": 27
+                },
+                {
+                  "val": "clarion",
+                  "offset": 80
+                }
+              ],
+              "location": "LoginStepDef.userProvidesUsernameAsAndPasswordAs(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 566674600,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "click on submit button",
+            "match": {
+              "location": "LoginStepDef.clickOnSubmitButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 593137900,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "user should be navigated to home page successfully",
+            "match": {
+              "location": "LoginStepDef.userShouldBeNavigatedToHomePageSuccessfully()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 243307300,
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "user click on logout button",
+            "match": {
+              "location": "LoginStepDef.userClickOnLogoutButton()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 216012800,
+              "status": "passed"
+            },
+            "line": 51,
+            "name": "user navigates to the login page of the clarion portal",
+            "match": {
+              "location": "LoginStepDef.userNavigatesToTheLoginPageOfTheClarionPortal()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@PromiseLog"
+          },
+          {
+            "name": "@5"
+          }
+        ]
+      }
+    ],
+    "name": "Promises Log Functionality",
+    "description": "",
+    "id": "promises-log-functionality",
+    "keyword": "Feature",
+    "uri": "src/test/resources/features/testcases.feature",
+    "tags": [
+      {
+        "name": "@PromiseLog",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
